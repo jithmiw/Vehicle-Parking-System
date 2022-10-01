@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="context" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ParkingListFormController">
+   <children>
+      <ImageView fitHeight="600.0" fitWidth="900.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/vehicle-parking.jpg" />
+         </image>
+      </ImageView>
+      <JFXComboBox fx:id="cmb" focusColor="BLACK" layoutX="48.0" layoutY="48.0" onAction="#cmbOnAction" prefHeight="31.0" prefWidth="204.0" promptText="In Parking" style="-fx-background-color: #ffffff;" unFocusColor="BLACK" />
+      <TableView fx:id="parkingListTable" layoutX="48.0" layoutY="119.0" opacity="0.85" prefHeight="442.0" prefWidth="806.0">
+        <columns>
+          <TableColumn fx:id="colVehicleNo" prefWidth="192.0" text="Vehicle Number" />
+          <TableColumn fx:id="colVehicleType" prefWidth="206.0" text="Vehicle Type" />
+            <TableColumn fx:id="colParkingSlot" prefWidth="187.0" text="Parking Slot" />
+            <TableColumn fx:id="colParkedTime" prefWidth="220.0" text="Parked Time" />
+        </columns>
+      </TableView>
+      <JFXButton buttonType="RAISED" layoutX="436.0" layoutY="48.0" onAction="#btnAddVehicleOnAction" prefHeight="32.0" prefWidth="122.0" style="-fx-background-color: #424446;" text="Add Vehicle" textFill="WHITE">
+         <font>
+            <Font name="Gill Sans MT" size="17.0" />
+         </font>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="584.0" layoutY="48.0" onAction="#btnAddDriverOnAction" prefHeight="32.0" prefWidth="122.0" style="-fx-background-color: #424446;" text="Add Driver" textFill="WHITE">
+         <font>
+            <Font name="Gill Sans MT" size="17.0" />
+         </font>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="732.0" layoutY="48.0" onAction="#btnLogOutOnAction" prefHeight="32.0" prefWidth="122.0" style="-fx-background-color: #DEDDDC;" text="Log Out">
+         <font>
+            <Font name="Gill Sans MT" size="17.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

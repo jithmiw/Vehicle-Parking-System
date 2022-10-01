@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="loginContext" blendMode="DARKEN" prefHeight="314.0" prefWidth="550.0" style="-fx-background-color: #C6CACD;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ManagementLoginFormController">
+   <children>
+      <ImageView blendMode="DARKEN" fitHeight="45.0" fitWidth="45.0" layoutX="253.0" layoutY="28.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/account_circle_black_24dp.jpg" />
+         </image>
+      </ImageView>
+      <Text layoutX="45.0" layoutY="128.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Usename">
+         <font>
+            <Font name="Lucida Bright" size="15.0" />
+         </font>
+      </Text>
+      <Text layoutX="45.0" layoutY="188.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password">
+         <font>
+            <Font name="Lucida Bright" size="15.0" />
+         </font>
+      </Text>
+      <TextField fx:id="txtUsername" layoutX="192.0" layoutY="107.0" prefHeight="31.0" prefWidth="311.0" />
+      <PasswordField fx:id="pwdPassword" layoutX="192.0" layoutY="167.0" prefHeight="31.0" prefWidth="311.0" />
+      <JFXButton buttonType="RAISED" layoutX="403.0" layoutY="242.0" onAction="#btnLoginOnAction" prefHeight="32.0" prefWidth="100.0" style="-fx-background-color: #424446;" text="Log In" textFill="WHITE">
+         <font>
+            <Font name="Gill Sans MT" size="17.0" />
+         </font>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="281.0" layoutY="242.0" onAction="#btnCancelOnAction" prefHeight="32.0" prefWidth="100.0" style="-fx-background-color: #424446;" text="Cancel" textFill="WHITE">
+         <font>
+            <Font name="Gill Sans MT" size="17.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

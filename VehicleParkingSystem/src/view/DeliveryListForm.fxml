@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="context" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DeliveryListFormController">
+    <children>
+        <ImageView fitHeight="600.0" fitWidth="900.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../img/vehicle-parking.jpg" />
+            </image>
+        </ImageView>
+        <JFXComboBox fx:id="cmb" focusColor="BLACK" layoutX="48.0" layoutY="48.0" onAction="#cmbOnAction" prefHeight="31.0" prefWidth="204.0" promptText="On Delivery" style="-fx-background-color: #ffffff;" unFocusColor="BLACK" />
+        <TableView fx:id="deliveryListTable" layoutX="48.0" layoutY="119.0" opacity="0.85" prefHeight="442.0" prefWidth="806.0">
+            <columns>
+                <TableColumn fx:id="colVehicleNo" prefWidth="171.0" text="Vehicle Number" />
+                <TableColumn fx:id="colVehicleType" prefWidth="191.0" text="Vehicle Type" />
+                <TableColumn fx:id="colName" prefWidth="223.0" text="Driver Name" />
+                <TableColumn fx:id="colLeftTime" prefWidth="220.0" text="Left Time" />
+            </columns>
+        </TableView>
+        <JFXButton buttonType="RAISED" layoutX="579.0" layoutY="48.0" onAction="#btnAddVehicleOnAction" prefHeight="32.0" prefWidth="122.0" style="-fx-background-color: #424446;" text="Add Vehicle" textFill="WHITE">
+            <font>
+                <Font name="Gill Sans MT" size="17.0" />
+            </font>
+        </JFXButton>
+        <JFXButton buttonType="RAISED" layoutX="732.0" layoutY="48.0" onAction="#btnAddDriverOnAction" prefHeight="32.0" prefWidth="122.0" style="-fx-background-color: #424446;" text="Add Driver" textFill="WHITE">
+            <font>
+                <Font name="Gill Sans MT" size="17.0" />
+            </font>
+        </JFXButton>
+    </children>
+</AnchorPane>
